@@ -1,0 +1,485 @@
+/* Variáveis */
+
+:root {
+    --primary-color: #b6775c;
+    --secondary-color: #ffffff;
+    --tertiary-color: #d5b6a2;
+
+    --text-color-primary: #ffffff;
+    --text-color-secondary: #000000;
+
+    --spacing: 0.25rem;
+    --transition: all 0.2s linear;
+    --dark-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.56);
+}
+
+/* Estilos Gerais */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Questrial';
+    font-size: 62.5%;
+}
+
+.navbar-logo {
+    font-family: 'Italianno';
+    color: var(--secondary-color);
+    font-weight: 900;
+    font-size: 3.4rem;
+    padding-left: 2rem;
+}
+
+/* Leafs */
+.leaf1 {
+    position: absolute;
+    opacity: 45%;
+    left: 2rem;
+    bottom: 18rem;
+    z-index: -1;
+}
+
+.leaf2 {
+    position: absolute;
+    opacity: 20%;
+    right: 1rem;
+    top: 130rem;
+    z-index: -1;
+}
+
+.leaf3 {
+    position: absolute;
+    opacity: 25%;
+    left: 2rem;
+    top: 245rem;
+    z-index: -1;
+}
+
+.leaf4 {
+    position: absolute;
+    opacity: 40%;
+    right: .4rem;
+    top: 190rem;
+    z-index: 1;
+}
+
+@media screen and (min-width: 725px) {
+    .leaf1, .leaf2, .leaf3, .leaf4 {
+        display: none;
+    }
+}
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    background: var(--primary-color);
+    padding: 3.8rem;
+    box-shadow: var(--dark-shadow);
+    width: 100%;
+    z-index: 3;
+    top: 0;
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-button {
+    background: transparent;
+    border: transparent;
+    color: var(--secondary-color);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.navbar-button:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+.navbar-list {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.navbar-list--show-links {
+    height: 29rem;
+}
+
+.navbar-list-link {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 1.6rem;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.navbar-list-link:hover {
+    background-color: var(--tertiary-color);
+    padding-left: 3.6rem;
+}
+
+.navbar-icons {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-button {
+        display: none;
+    }
+
+    .navbar-list {
+        height: auto;
+        display: flex;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 1.6rem;
+    }
+
+    .navbar-list-link:hover {
+        background: none;
+        padding-left: 1.6rem;
+        color: var(--tertiary-color);
+    }
+}
+
+/* About */
+
+#about {
+    padding: 0;
+    position: relative;
+    min-height: calc(100vh - 8rem);
+    margin-top: 8rem;
+}
+
+.about-wallpaper {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.about-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    max-width: 37rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 2.3rem;
+    font-weight: 400;
+}
+
+.about-text-tcc {
+    font-weight: 600;
+}
+
+/* Contact */
+
+.contact {
+    padding-top: 4rem;
+}
+
+.contact-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 37rem;
+}
+
+.contact-title-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-items {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-icon {
+    color: var(--primary-color);
+    margin-right: 3rem;
+    font-size: 3rem;
+    font-weight: 900;
+    transition: var(--transition);
+}
+
+.contact-icon:hover {
+    color: var(--tertiary-color);
+}
+
+@media screen and (min-width: 725px) {
+    #about {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about-content {
+        width: 40vw;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .about-wallpaper {
+        height: 100%;
+        width: 40%;
+    }
+
+    .about-logo {
+        padding-top: 2rem;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .about-logo img {
+        width: 50%;
+    }
+
+    .about-text {
+        max-width: 35rem;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 825px) {
+    .about-wallpaper {
+        width: 50%;
+    }
+
+    .about-logo img {
+        width: 65%;
+    }
+
+    .contact {
+        display: block;
+        padding-top: 8rem;
+    }
+
+    .about-text {
+        max-width: 45rem;
+    }
+}
+
+/* Services */
+
+#services {
+    padding: 5rem;
+}
+
+.services-underline {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.6rem;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2rem;
+    text-align: center;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.services-title {
+    font-family: "Italianno";
+    font-size: 4.4rem;
+    font-weight: 500;
+}
+
+.services-items {
+    padding-left: 3.4rem;
+    line-height: 2.6rem;
+    font-size: 2rem;
+    list-style: disc;
+}
+
+/* Benefits */
+
+#benefits {
+    background: var(--tertiary-color);
+    padding: 5rem;
+}
+
+.benefits-title {
+    font-family: "Italianno";
+    font-size: 4.4rem;
+    font-weight: 500;
+}
+
+.benefits-items {
+    padding-left: 3.4rem;
+    line-height: 2.6rem;
+    font-size: 2rem;
+    list-style: disc;
+}
+
+@media screen and (min-width: 725px) {
+    #services {
+        width: 50%;
+    }
+
+    .services-underline {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #benefits {
+        width: 50%;
+    }
+}
+
+/* Approach and Depositions */
+
+#approach {
+    padding: 5rem;
+}
+
+.approach-title {
+    font-family: "Italianno";
+    font-size: 4.4rem;
+    font-weight: 500;
+    padding-bottom: 2.4rem;
+}
+
+.approach-description {
+    padding-left: 3.4rem;
+    line-height: 2.6rem;
+    font-size: 2rem;
+}
+
+#depositions {
+    padding: 5rem;
+    background: var(--tertiary-color);
+}
+
+.depositions-title {
+    font-family: "Italianno";
+    font-size: 4.4rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 725px) {
+    #approach {
+        width: 50%;
+        background: var(--tertiary-color);
+    }
+
+    #depositions {
+        width: 50%;
+        background: white;
+    }
+
+    .container-2 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+/* Footer */
+
+.footer {
+    color: white;
+    background: var(--primary-color);
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.4rem;
+}
+
+.footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.footer-icon {
+    color: white;
+    padding: 1rem;
+    line-height: 2.2rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-icon:hover {
+    color: var(--tertiary-color);
+}
+
+.footer-icon {
+    color: white;
+    align-items: center;
+    font-size: 2.8rem;
+    transition: var(--transition);
+}
+
+/* Slides Style */
+
+.radio-items {
+    width: 100%;
+    height: 7%;
+    overflow: hidden;
+}
+
+.slide-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.fa-user {
+    padding-right: 1rem;
+    font-size: 3rem;
+}
+
+.slide-names {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.slide-description {
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+.fa-star {
+    font-size: 1.6rem;
+    color: yellow;
+}
