@@ -13,7 +13,6 @@ function exibirTexto() {
     }
 }
 
-
 function iniciarAlternanciaAutomatica() {
     intervalId = setInterval(function () {
         for (var i = 0; i < radios.length; i++) {
@@ -34,9 +33,10 @@ for (var i = 0; i < radios.length; i++) {
     radios[i].addEventListener("change", exibirTexto);
 }
 
-exibirTexto(); // Adicione esta linha para exibir o primeiro item
+exibirTexto();
 
 iniciarAlternanciaAutomatica();
 
-elemento.addEventListener("mouseenter", pararAlternanciaAutomatica);
-elemento.addEventListener("mouseleave", iniciarAlternanciaAutomatica);
+var depositions = document.querySelector("#depositions");
+depositions.addEventListener("mouseenter", pararAlternanciaAutomatica);
+depositions.addEventListener("mouseleave", iniciarAlternanciaAutomatica);

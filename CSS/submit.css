@@ -1,0 +1,31 @@
+body {
+    background-image: linear-gradient(to right, rgba(211, 141, 115, 0.719), rgba(211, 141, 115, 0.719)), url(../Assets/form-wallpaper.jpg);
+}
+
+.content {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.return {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+    background: rgb(29, 197, 29);
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.return a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
